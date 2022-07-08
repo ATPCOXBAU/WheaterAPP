@@ -1,0 +1,24 @@
+
+body{
+    background-color: #F5ECD6;
+}
+h1.header {
+    color: #EFB420;
+    font-family: 'Arima';
+    text-align: center;
+}
+img.logoh{
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+ 
+}
+
+header {
+    background-color: #488974;
+    border: black solid 2px;
+
+   
+}
