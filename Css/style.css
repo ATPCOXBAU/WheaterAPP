@@ -1,24 +1,121 @@
 
 body{
-    background-color: #F5ECD6;
+
+    background-color: #c2cad7;
+    background-image: linear-gradient( #c8b7ac
+    , #c2cad7);
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
 }
+
+
 h1.header {
-    color: #EFB420;
-    font-family: 'Arima';
-    text-align: center;
+    color: #FEFDFB;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    text-align: left;
+    font-size: 1.1rem;
+    padding: 0;
+    margin: 0;
+    display: inline;
+
+  
 }
+
 img.logoh{
-    width: 50px;
-    height: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
- 
+    width: 2rem;
+    height:2rem;
+    position: relative;
+    display: inline;
+    margin-right: 0.5rem; 
 }
 
-header {
-    background-color: #488974;
+
+
+
+
+
+ul.navv{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li.item{
+    float: left;
+    margin-left: 1rem;
+}
+
+li a.item{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+
+}
+li.item a:hover {
+    background-color: #FEFDFB;
+    color: #333333;
+}
+
+
+
+
+
+
+nav.header {
+    background-color: #333333;
     border: black solid 2px;
-
-   
+    align-items: left;
+    
 }
+
+
+div.title{
+
+}
+
+div.left{
+    margin-left: 1rem;
+}
+
+
+
+h1.txtt{
+    color: #1B64ED;
+    font-family: 'Edu NSW ACT Foundation';
+        text-align: center;
+        font-size: 25px;
+}
+
+
+div.card-body{
+    background-color: #FEFDFB;
+    background-image: url("../Imgs/sunrise.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border: black solid 2px;
+    align-items: left;
+    padding: 1rem;
+}
+
+div.card-body{
+    margin-top: 0.5rem;
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+  }
+  

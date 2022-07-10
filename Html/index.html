@@ -20,36 +20,79 @@
 </head>
 
 <body>
-    <header class="p-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-auto" style="">
-                    <img class="logoh" src="../Imgs/sunshine.png" alt="logo">
-                </div>
-                <div class="col-md-auto">
-                    <h1 class="header">
-                        NiceWheater APP
-                    </h1>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <div class="container">
+    <nav class="navbar header">
+        <div>
+            <img class=" logoh" src="../Imgs/sunshine.png">
+
+            <h1 class="header">
+                NiceWheater <span style="color: #f94c57;"> APP </span>
+            </h1>
+        </div>
+
+        <div class="lista">
+            <ul class="navv">
+                <li class="item">
+                    <a class="item">
+                        Busqueda Por Latitud y Longitud
+                    </a>
+                </li>
+                <li class="item">
+                    <a class="item">
+                        Clima Por Ciudad
+                    </a>
+
+                </li>
+                <li class="item">
+                    <a class="item">
+                        Informacion
+                    </a>
+
+                </li>
+
+            </ul>
+        </div>
+
+
+
+    </nav>
+
+
+
+    <div class="container cbody">
 
         <div class="row">
             <div class="col">
-                <button type="button" onclick="apicall()">
-                    API CALL
+
+            </div>
 
 
-                </button>
+            <div class="col">
+
+
+                <div class="card"
+                    style="width: 25rem ; height: 25rem; background-color: transparent; border-color: transparent;">
+                    <div class="card-body" style="background-color: none;">
+                        <h5 class="card-title">Ciudad De Mexico</h5>
+                        <h5 class="card-title">Hora: 15:20</h5>
+                        <h1>
+                            21°C
+                        </h1>
+                        <h3>
+                            Soleado
+                        </h3>
+
+                        <h3>
+                            Humedad: 40%
+                            <a href="#" class="btn btn-primary" onclick="getlat()">Go somewhere</a>
+                    </div>
+                </div>
             </div>
             <div class="col">
-                2 of 3
-            </div>
-            <div class="col">
-                3 of 3
+
+                <div id="map"></div>
+
+
             </div>
         </div>
     </div>
@@ -64,6 +107,16 @@
 
 
 
+
+
+
+
+
+
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+        defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
