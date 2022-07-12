@@ -111,11 +111,12 @@ div.card-body{
     margin-top: 0.5rem;
 }
 
-/* Set the size of the div element that contains the map */
-#map {
-    height: 400px;
-    /* The height is 400 pixels */
+.map {
+    height: 500px;
     width: 100%;
-    /* The width is the width of the web page */
-  }
-  
+    border-radius:150px;
+}
+
+canvas {
+    border-radius:150px;
+}
