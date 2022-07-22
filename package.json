@@ -1,0 +1,22 @@
+{
+  "name": "workplace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ATPCOXBAU/WheaterAPP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ATPCOXBAU/WheaterAPP/issues"
+  },
+  "homepage": "https://github.com/ATPCOXBAU/WheaterAPP#readme",
+  "dependencies": {
+    "sweetalert2": "^11.4.23"
+  }
+}

@@ -8,6 +8,10 @@
         href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/css/ol.css" type="text/css">
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/build/ol.js"></script>
 
+
+
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
@@ -29,7 +33,7 @@
 
     <nav class="navbar header">
         <div>
-            <img class=" logoh" src="../Imgs/sunshine.png">
+            <img class="logoh" src="../Imgs/sunshine.png">
 
             <h1 class="header">
                 NiceWheater <span style="color: #f94c57;"> APP </span>
@@ -39,7 +43,7 @@
         <div class="lista">
             <ul class="navv">
                 <li class="item">
-                    <a class="item">
+                    <a class="item" onclick="apicall()">
                         Busqueda Por Latitud y Longitud
                     </a>
                 </li>
@@ -76,21 +80,20 @@
             <div class="col">
 
 
-                <div class="card"
-                    style="width: 25rem ; height: 25rem; background-color: transparent; border-color: transparent;">
-                    <div class="card-body" style="background-color: none;">
-                        <h5 class="card-title">Ciudad De Mexico</h5>
-                        <h5 class="card-title">Hora: 15:20</h5>
-                        <h1>
+                <div class="card">
+                    <div class="card-body" id="card-body" style="background-color: none;">
+                        <h2 class="card-title" id="lugar" style="color: #fff;">Ciudad De Mexico</h2>
+                        <h3 class="card-title " id="hour" style=" color: #fff;">Hora: 15:20</h3>
+                        <h1 id="grados" style=" font-size: 4rem;color: #fff;">
                             21°C
                         </h1>
-                        <h3>
+
+                        <h3 id="estado" style="color: #fff;">
                             Soleado
                         </h3>
-
-                        <h3>
+                        <h3 id="humedad" style="color: #fff;">
                             Humedad: 40%
-                            <a href="#" class="btn btn-primary" onclick="getlat()">Go somewhere</a>
+                        </h3>
                     </div>
                 </div>
             </div>

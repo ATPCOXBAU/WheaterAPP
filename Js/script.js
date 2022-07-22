@@ -1,52 +1,54 @@
 
-const endpoint = "http://api.openweathermap.org/"
-const urlprueba = "https://api.openweathermap.org/data/2.5/onecall?lat=19.4285&lon=-99.1277&exclude=daily&appid=3d070b4fd285e9dfa261851a42575fbe&units=imperial"
-
-
-
+const endpoint = "https://api.openweathermap.org/data/2.5/onecall"
 
 window.onload = function () {
 
+    gethour()
+    const d = new Date()
+    let hora = document.getElementById("hour").textContent = "Hora " + d.getHours() + ":" + d.getMinutes()
 
-    var width = 3;
-    var styles = [
-        new ol.style.Style({
-            stroke: new ol.style.Stroke({
-                color: 'white',
-                width: width + 2
-            })
-        }),
-        new ol.style.Style({
-            stroke: new ol.style.Stroke({
-                color: 'blue',
-                width: width
-            })
-        })
-    ];
-    var map = new ol.Map({
-        target: 'map',
-        layers: [
-            new ol.layer.Tile({
-                source: new ol.source.OSM()
-            })
-        ],
-        view: new ol.View({
-            center: ol.proj.fromLonLat([-99.1277, 19.4285,]),
-            zoom: 10
-        })
-    });
+    navigator.geolocation.getCurrentPosition(success, error, options);
+    console.log()
 
+
+
+}
+
+function gethour() {
+    const d = new Date()
+    let hour = d.getHours()
+    console.log(hour)
+    if (hour >= 0 & hour <= 12) {
+        url = "url('../Imgs/morning.jpg')"
+    }
+    if (hour >= 13 & hour <= 18) {
+        url = "url('../Imgs/sunset.jpg')"
+    }
+    if (hour >= 19 & hour <= 24) {
+
+        url = 'url("../Imgs/nigth.jpg")'
+
+    }
+    document.getElementById("card-body").style.backgroundImage = url
 }
 
 
 
 
-function apicall() {
-    fetch(urlprueba)
+function apicall(lat, long) {
+    var links = new URL(endpoint)
+    var params = { lat: lat, lon: long, appid: "3d070b4fd285e9dfa261851a42575fbe", units: "metric" }
+    links.search = new URLSearchParams(params).toString();
+    fetch(links)
         .then(response => { return response.json() })
         .then(data => {
             console.log(data)
             console.log(data.current.temp)
+            document.getElementById("lugar").textContent = data.timezone
+            document.getElementById("grados").textContent = Math.floor(data.current.temp) + "°C"
+            document.getElementById("estado").textContent = "Viento: " + Math.floor(data.current.wind_speed) + " m/s"
+            document.getElementById("humedad").textContent = "Humedad: " + Math.floor(data.current.humidity) + "%"
+            map(lat, long)
 
         })
         .catch(error => {
@@ -54,12 +56,43 @@ function apicall() {
         })
 }
 
-
-function getlat() {
-    let valor1 = prompt("Ingresa Tu Latitud", 0);
-    console.log(valor1)
-    let valor2 = prompt("Ingresa Tu Longitud", 0);
-
+function map(lat, lon) {
+    const map = new ol.Map({
+        target: 'map',
+        layers: [
+            new ol.layer.Tile({
+                source: new ol.source.OSM()
+            })
+        ],
+        view: new ol.View({
+            center: ol.proj.fromLonLat([lon, lat,]),
+            zoom: 15
+        })
+    });
 
 }
+
+
+function success(pos) {
+    var crd = pos.coords;
+
+    console.log('Your current position is:');
+    console.log('Latitude : ' + crd.latitude);
+    console.log('Longitude: ' + crd.longitude);
+    console.log('More or less ' + crd.accuracy + ' meters.');
+
+
+    apicall(crd.latitude, crd.longitude)
+};
+
+var options = {
+
+    timeout: 6000,
+    maximumAge: 0
+};
+
+function error(err) {
+    console.warn('ERROR(' + err.code + '): ' + err.message);
+};
+
 

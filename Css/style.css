@@ -94,10 +94,19 @@ h1.txtt{
         font-size: 25px;
 }
 
+div.card{
+    width: 25rem;
+    height: 25rem;
+    max-width:  auto     ; 
+    max-height: auto    ; 
+    min-width:auto;
+    min-height: auto;
+    background-color: transparent; 
+    border-color: transparent;
+}
 
 div.card-body{
     background-color: #FEFDFB;
-    background-image: url("../Imgs/sunrise.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -105,16 +114,15 @@ div.card-body{
     border: black solid 2px;
     align-items: left;
     padding: 1rem;
+    border-radius: 1rem;
+    
 }
 
-div.card-body{
-    margin-top: 0.5rem;
-}
 
 .map {
-    height: 500px;
+    height: 25rem;
     width: 100%;
-    border-radius:150px;
+   
 }
 
 canvas {
