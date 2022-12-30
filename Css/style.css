@@ -1,6 +1,5 @@
 
 body{
-
     background-color: #c2cad7;
     background-image: linear-gradient( #c8b7ac
     , #c2cad7);
@@ -9,7 +8,6 @@ body{
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
 }
 
 
@@ -77,9 +75,6 @@ nav.header {
 }
 
 
-div.title{
-
-}
 
 div.left{
     margin-left: 1rem;
@@ -95,11 +90,9 @@ h1.txtt{
 }
 
 div.card{
-    width: 25rem;
-    height: 25rem;
-    max-width:  auto     ; 
-    max-height: auto    ; 
-    min-width:auto;
+    width: device-width;
+    height: device-height;
+   
     min-height: auto;
     background-color: transparent; 
     border-color: transparent;
@@ -120,11 +113,58 @@ div.card-body{
 
 
 .map {
-    height: 25rem;
-    width: 100%;
+    width: 20rem;
+    height: 18.5rem;
+  
    
 }
 
 canvas {
     border-radius:150px;
+}
+
+
+
+footer{
+    background-color: #333333;
+    padding: 3rem;
+    color: white;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    background:#333333;
+
+}
+
+footer section{
+    float: right;
+
+
+}
+footer p{
+    margin: 0;  
+
+}
+footer a{
+    transition: color 0.3s ease;
+    color: white;
+    text-decoration: none;
+
+}
+
+footer a:hover{
+    color: cornflowerblue;
+    
+}
+
+.link{
+    color: #c5cae9 ;
+    font-size: 12px;
+    cursor: pointer;
+
+}
+.link a:hover{
+    color: cornflowerblue;
 }
